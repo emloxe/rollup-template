@@ -1,7 +1,10 @@
+import json from 'rollup-plugin-json';
+
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { uglify } from 'rollup-plugin-uglify';
+import copyright from '../src/copyrightHeader';
 
 export default {
   input: 'src/kuno.js',
@@ -13,9 +16,11 @@ export default {
       globals: {
         $: '$',
       },
+      banner: copyright,
     },
   ],
   plugins: [
+    json(),
     resolve(),
     commonjs(),
     babel({

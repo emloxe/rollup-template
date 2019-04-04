@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "rollup -c build/rollup.config.dev.js --watch",
-    "build": "rollup -c build/rollup.config.build.js",
+    "dev": "rollup -m -c build/rollup.config.dev.js --watch",
+    "build": "rollup -m -c build/rollup.config.build.js",
     "release": "rollup -c build/rollup.config.release.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,6 +30,7 @@
     "rollup": "^1.8.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.3.0",
+    "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^4.0.1",
     "rollup-plugin-uglify": "^6.0.2"
   },

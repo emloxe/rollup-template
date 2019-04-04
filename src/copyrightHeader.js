@@ -1,4 +1,4 @@
-/**
+export default `/**
  *
  * kuno - https://github.com/emloxe/rollup-template
  *
@@ -18,4 +18,4 @@
  *
  * @author emloxe (emloxe@163.com)
  *
- */
+ */`;

@@ -16,13 +16,17 @@ function clone(object, deep) {
   deep = defaultValue(deep, false);
 
   let result = new object.constructor();
-  object.forEach((propertyName) => {
-    let value = object[propertyName];
-    if (deep) {
-      value = clone(value, deep);
+  for (let propertyName in object) {
+    if (object.hasOwnProperty(propertyName)) {
+      let value = object[propertyName];
+      if (deep) {
+        value = clone(value, deep);
+      }
+      result[propertyName] = value;
     }
-    result[propertyName] = value;
-  });
+  }
+
+  console.log(123);
 
   return result;
 }
