@@ -25,3 +25,10 @@
 `Prettier - Code formatter`
 2. 编辑时格式化代码
 组合键 `shift+ctrl+p`输入`format document`回车
+
+# 关于插件
+## 为什么选择terser
+terser是一个Javascript代码的压缩和美化工具，选择terser的原因有两点：
+
+uglify-es不再维护，而uglify-js不支持 ES6+，这一点在上一篇教程中我们已经看到了，rollup-plugin-uglify就是基于uglify-js，所以它不能够支持ES6语法；
+terser是uglify-es的一个分支，它保持了与uglify-es和uglify-js@3的API及CLI的兼容。
