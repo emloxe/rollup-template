@@ -2,6 +2,11 @@
   "extends": "airbnb-base",
   "plugins": ["prettier"],
   "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": true
+  },
   "env": {
     "browser": true,
     "es6": true,
@@ -20,8 +25,7 @@
       {
         "args": "none"
       }
-    ],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    ]
   },
   "settings": {
     "import/resolver": {
