@@ -5,7 +5,7 @@ import simplevars from 'postcss-simple-vars';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
-import copyright from '../src/copyrightHeader';
+import copyright from './copyrightHeader';
 
 export default {
   input: 'src/index.js',
@@ -25,6 +25,12 @@ export default {
     babel({
       exclude: 'node_modules/**',
       presets: [['@babel/preset-env']],
+    }),
+    postcss({
+      plugins: [
+        simplevars(),
+      ],
+      extensions: ['.css'],
     }),
     terser(),
   ],

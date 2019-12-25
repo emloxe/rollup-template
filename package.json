@@ -10,16 +10,8 @@
     "release": "rollup build/rollup.config.release.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/emloxe/rollup-demo.git"
-  },
   "author": "emloxe",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/emloxe/rollup-demo/issues"
-  },
-  "homepage": "https://github.com/emloxe/rollup-demo#readme",
   "devDependencies": {
     "@babel/core": "^7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",

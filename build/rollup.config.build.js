@@ -1,13 +1,13 @@
 import json from 'rollup-plugin-json';
 import babel from 'rollup-plugin-babel';
-import postcss from 'rollup-plugin-postcss';
-import simplevars from 'postcss-simple-vars';
-import copyright from '../src/copyrightHeader';
+// import postcss from 'rollup-plugin-postcss';
+// import simplevars from 'postcss-simple-vars';
+import copyright from './copyrightHeader';
 
 export default {
   input: 'src/index.js',
   output: {
-    file: 'dist/test.js',
+    file: 'dist/index.js',
     format: 'umd',
     name: 'test',
     sourcemap: 'inline',
@@ -16,12 +16,11 @@ export default {
     },
     banner: copyright,
   },
-  indent: false,
   plugins: [
-    // babel({
-    //   exclude: 'node_modules/**',
-    // }),
     json(),
+    babel({
+      exclude: 'node_modules/**',
+    }),
     // postcss({
     //   plugins: [
     //     simplevars(),
