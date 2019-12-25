@@ -6,6 +6,8 @@ import ModuleB from './ModuleB';
 const moduleA = new ModuleA(version);
 const moduleB = new ModuleB(version);
 
+moduleA.print();
+
 export default {
   version,
   moduleA,

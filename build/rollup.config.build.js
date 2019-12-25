@@ -1,15 +1,15 @@
 import json from 'rollup-plugin-json';
 import babel from 'rollup-plugin-babel';
-// import postcss from 'rollup-plugin-postcss';
-// import simplevars from 'postcss-simple-vars';
 import copyright from './copyrightHeader';
+
+import config from './config';
 
 export default {
   input: 'src/index.js',
   output: {
     file: 'dist/index.js',
+    name: config.name,
     format: 'umd',
-    name: 'test',
     sourcemap: 'inline',
     globals: {
       $: '$',
@@ -17,10 +17,10 @@ export default {
     banner: copyright,
   },
   plugins: [
-    json(),
     babel({
       exclude: 'node_modules/**',
     }),
+    json(),
     // postcss({
     //   plugins: [
     //     simplevars(),

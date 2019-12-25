@@ -4,12 +4,14 @@ import postcss from 'rollup-plugin-postcss';
 import simplevars from 'postcss-simple-vars';
 import copyright from './copyrightHeader';
 
+import config from './config';
+
 export default {
   input: 'src/index.js',
   output: {
     file: 'dist/index.js',
+    name: config.name,
     format: 'umd',
-    name: 'test',
     sourcemap: true,
     globals: {
       $: '$',
@@ -21,7 +23,6 @@ export default {
     exclude: 'node_modules/**',
   },
   plugins: [
-    json(),
     babel({
       exclude: 'node_modules/**',
     }),
@@ -31,5 +32,5 @@ export default {
       ],
       extensions: ['.css'],
     }),
-  ],
+    json()],
 };

@@ -1,9 +1,9 @@
 export default `/**
  *
- * rollup-demo - https://github.com/emloxe/rollup-demo
+ * projectName - url
  *
- * Copyright 2019 emloxe Contributors
+ * Copyright 2019 author-name Contributors
  *
- * @author emloxe (emloxe@163.com)
+ * @author author-name (author-email)
  *
  */`;
